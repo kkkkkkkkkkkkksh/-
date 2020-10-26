@@ -1,0 +1,13 @@
+'''Дан массив вида [a,b,c,d,e,a,a,b,c]
+а) Преобразуйте его в словарь вида
+{
+   a: [0,5,6],
+   b: [1,7],
+   ...
+   
+   e: [5]
+}
+б) Сделайте это в одну строчку кода (разрешается с меньшей эффективностью)'''
+Words = ['a','b','c','d','e','a','a','b','c']
+Dictionary = dict((elem, [key for key, value in enumerate(Words) if value == elem])for elem in Words)
+print(Dictionary)
